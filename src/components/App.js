@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import LoginForm from "./LoginFrom";
+import Login from "./LoginFrom";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -10,12 +10,10 @@ function App() {
 
   return (
     <div>
-      <h1>Lift State Up Demo</h1>
+      <h1>{isLoggedIn ? "Welcome User!" : "Please Login"}</h1>
 
-      {isLoggedIn ? (
-        <h2>Welcome User!</h2>
-      ) : (
-        <LoginForm
+      {!isLoggedIn && (
+        <Login
           isLoggedIn={isLoggedIn}
           handleLogin={handleLogin}
         />

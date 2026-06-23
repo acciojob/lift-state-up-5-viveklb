@@ -1,6 +1,6 @@
 import React from "react";
 
-function LoginForm({ handleLogin }) {
+function Login({ handleLogin }) {
   const submitHandler = (e) => {
     e.preventDefault();
     handleLogin();
@@ -12,12 +12,12 @@ function LoginForm({ handleLogin }) {
         type="text"
         placeholder="Username"
       />
-
+      <br />
       <input
         type="password"
         placeholder="Password"
       />
-
+      <br />
       <button type="submit">
         Login
       </button>
@@ -25,4 +25,4 @@ function LoginForm({ handleLogin }) {
   );
 }
 
-export default LoginForm;
+export default Login;
