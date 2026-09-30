@@ -12,12 +12,10 @@ function App() {
     <div>
       <h1>{isLoggedIn ? "Welcome User!" : "Please Login"}</h1>
 
-      {!isLoggedIn && (
-        <Login
-          isLoggedIn={isLoggedIn}
-          handleLogin={handleLogin}
-        />
-      )}
+      <Login
+        isLoggedIn={isLoggedIn}
+        handleLogin={handleLogin}
+      />
     </div>
   );
 }

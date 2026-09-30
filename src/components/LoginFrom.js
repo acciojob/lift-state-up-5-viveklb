@@ -1,10 +1,14 @@
 import React from "react";
 
-function Login({ handleLogin }) {
+function Login({ isLoggedIn, handleLogin }) {
   const submitHandler = (e) => {
     e.preventDefault();
     handleLogin();
   };
+
+  if (isLoggedIn) {
+    return null;
+  }
 
   return (
     <form onSubmit={submitHandler}>
